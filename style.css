@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #E6F7F1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 600px; /* زيادة العرض الأقصى */
+    width: 100%;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .form-group input {
+    flex: 1;
+  }
+  
+  label {
+    color: rgb(45, 38, 38);
+    margin-bottom: 12px;
+    display: block;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  .radio-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .radio1, .radio2 {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  input[type="radio"] {
+    margin-right: 20px;
+    margin: 15px;
+    align-items: center; 
+  }
+  
+  textarea {
+    height: 100px;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 10px;
+    margin-top: 40px;
+  }
+  
+  button {
+    background-color: #006B58;
+    color: #ffffff;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 40px;
+  }
+  
+  button:hover {
+    background-color: #005247;
+  }
+  
+  .attribution {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+  
+  /* تنظيم الحقول الجانبية */
+  @media (min-width: 768px) {
+    .form-group {
+      flex-direction: row;
+    }
+  
+    .radio1, .radio2 {
+      width: 250px;
+    }
+  
+    #first-name, #last-name {
+      width: 250px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .form-group {
+      flex-direction: column;
+      gap: 0; /* إزالة الفجوة بين الحقول */
+    }
+    
+    .radio-group {
+      flex-direction: column; /* جعل الـ radio يظهران تحت بعض */
+    }
+    
+    .radio1, .radio2 {
+      width: 100%; /* عرض العنصرين يكون 100% */
+      margin-bottom: 10px; /* إضافة مسافة بينهم */
+    }
+  
+    #first-name, #last-name {
+      width: 100%; /* عرض الحقول النصية يكون 100% */
+    }
+  }
